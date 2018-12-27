@@ -1,0 +1,17 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Sample Strimm REST API client in Node.",
+  "main": "auth.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Subhash Chandran",
+  "license": "private",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
