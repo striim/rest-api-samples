@@ -1,22 +1,19 @@
 require "test/unit"
 require_relative './AuthToken'
 
-
-# Assumes server is already running on localhost:9080
+# Assumption:
+# Server running in localhost:9080 with user-password `admin`/`admin`.
 class TestClient < Test::Unit::TestCase
 
-   def test_negative
-       # This is assuming server started with admin/admin
-       assert_match('500',StriimRestClient.new().getAuthToken('admin','test'),"Authentication Error")
-   end
+  def test_negative
+    client = StriimRestClient.new('http://localhost:9080')
+    assert_raise(RuntimeError) { client.auth_token('admin', 'test') }
+  end
 
-   def test_positive
-        assert_match('200',StriimRestClient.new().getAuthToken('admin','admin'),"Authentication Request Succeeded")
-   end
-     
-   def teardown
-      # Nothing to do
-   end
+  def test_positive
+    client = StriimRestClient.new('http://localhost:9080')
+    assert_equal(36, client.auth_token('admin', 'admin').length)
+  end
               
 end
 
