@@ -26,6 +26,3 @@ class StriimRestClient
     end
   end
 end
-#Uncomment this also if you want direct output.
-#client=StriimRestClient.new()
-#client.getAuthToken('admin','admin')
