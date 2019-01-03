@@ -1,5 +1,5 @@
 require "test/unit"
-require_relative './AuthToken'
+require_relative './auth_token'
 
 # Assumption:
 # Server running in localhost:9080 with user-password `admin`/`admin`.
