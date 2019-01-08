@@ -1,0 +1,17 @@
+# User-specific VS files
+*.suo
+*.user
+*.sln.docstates
+**/license.config
+
+packages/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+x64/
+bld/
+[Bb]in/
+[Oo]bj/
+
